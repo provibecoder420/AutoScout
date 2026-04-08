@@ -18,41 +18,26 @@
     <section class="filters-panel">
       <h2>Vehicle Filters</h2>
       <form id="searchForm">
-        <!-- Make Selection Grid -->
-        <div class="make-section">
-          <label class="section-label">Select Make</label>
-          <div class="make-grid" id="makeGrid">
-            <!-- Populated by JS -->
-          </div>
-          <div class="make-selected" id="makeSelected" style="display:none;">
-            <span class="selected-label">Selected:</span>
-            <span class="selected-value" id="makeSelectedValue"></span>
-            <button type="button" class="btn-clear-make" id="clearMake">&times; Clear</button>
-          </div>
-        </div>
-
-        <!-- Model Selection (appears after make) -->
-        <div class="model-section" id="modelSection" style="display:none;">
-          <label class="section-label">Select Model</label>
-          <div class="model-grid" id="modelGrid">
-            <!-- Populated by JS -->
-          </div>
-          <div class="model-selected" id="modelSelected" style="display:none;">
-            <span class="selected-label">Selected:</span>
-            <span class="selected-value" id="modelSelectedValue"></span>
-            <button type="button" class="btn-clear-make" id="clearModel">&times; Clear</button>
-          </div>
-        </div>
-
-        <input type="hidden" id="make" value="">
-        <input type="hidden" id="model" value="">
-
-        <!-- Collapsible: More Filters -->
+        <!-- Collapsible: More Filters (mobile only) -->
         <button type="button" class="filter-section-toggle" id="filtersToggle">
           More Filters <span class="toggle-arrow">&#9660;</span>
         </button>
         <div class="filter-section-body" id="filtersBody">
         <div class="filter-grid">
+
+          <div class="filter-group">
+            <label for="make">Make</label>
+            <select id="make">
+              <option value="">Any Make</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="model">Model</label>
+            <select id="model" disabled>
+              <option value="">Any Model</option>
+            </select>
+          </div>
 
           <div class="filter-group">
             <label for="yearMin">Year (Min)</label>
